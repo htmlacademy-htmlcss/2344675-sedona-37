@@ -2,11 +2,300 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона | Каталог</title>
+    <title>HTML Academy: Седона | Гостиницы</title>
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+    <!-- Header -->
+    <header class="main-header">
+      <nav class="main-nav">
+        <a href="index.html">
+          <img src="#" alt="Логотип">
+        </a>
+        <ul class="main-nav-list">
+          <li class="main-nav-item current">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#">О Седоне</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="#" class="main-nav-search"> <!-- предполагаем, что это ссылка на поиск гостиниц -->
+              <img src="#" alt="Поиск">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="main-nav-favorites"> <!-- предполагаем, что это ссылка на список избранных гостиниц --> <!-- непонятен смысл счетчика на иконке -->
+              <img src="#" alt="Избранное">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="main-nav-go">
+              <span>Хочу сюда!</span> <!-- предполагаем, что это ссылка на страницу о том, как приехать в Седону -->
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="catalog-main"> <!-- фильтры -->
+      <section catalog.adjust>
+        <h1>Гостиницы Седоны</h1>
+        <ul class="catalog-breadcrumbs">
+          <li class="catalog-breadcrumb-home">
+            <a href="index.html">
+              <img src="" alt="Главная">
+            </a>
+          </li>
+          <li class="catalog-breadcrumb-arrow"> <!-- возможно, будет лучше добавлять стрелку чере ::after -->
+            <img src="" alt=">">
+          </li>
+          <li class="catalog-breadcrumb">Гостиницы</span>
+        </ul>
+        <div class="catalog-filters">
+          <h2 class="visually-hidden">Подбор гостиницы в Седоне</h2>
+          <fieldset class=catalog-selector>
+            <legend class="catalog-filter-title">Инфраструктура:</legend>
+              <ul>
+                <li>
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="pool">
+                  Бассейн
+                </li>
+                <li>
+                  </label>
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="parking">
+                    Парковка
+                  </label>
+                </li>
+                <li>
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="wi-fi">
+                    Wi-Fi
+                  </label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class=catalog-selector>
+            <legend class="catalog-filter-title">Тип Жилья:</legend>
+            <ul>
+              <li>
+              <label class="control">
+                <input class="control-input" type="radio" name="residental-type">
+                Гостиница
+              </li>
+              <li>
+                </label>
+                <label class="control">
+                  <input class="control-input" type="radio" name="residental-type">
+                  Мотель
+                </label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="control-input" type="radio" name="residental-type">
+                  Апартаменты
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class=catalog-selector>
+            <p class="catalog-filter-title">Стоимость, ₽:</p>
+            <!-- TODO: слайдер -->
+          </div>
+          <div class="catalog-selection-buttons">
+            <button class="catalog-filter-buttonn" type="submit">Применить</button>
+            <button class="catalog-filter-buttonn button-transparent" type="submit">Сбросить</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-cards-caption"> <!-- блок карточек -->
+        <h2 class="visually-hidden">Гостиницы в Седоне</h2>
+        <p class="catalog-cards-caption-title">Найдено гостиниц:
+          <span>38</span> <!-- число будет подставляться из бека -->
+        </p>
+        <select class="select-control" aria-label="Сортировка">
+          <option value="cheapest">Сначала дешевые</option>
+          <option value="cheapest">Сначала дорогие</option> <!-- предположительно, в макете других значений не указано -->
+          <option value="cheapest">По рейтингу</option>     <!-- предположительно, в макете других значений не указано -->
+        </select>
+        <a href="#" class="button-cardstyle-tiles">
+          <span class="visually-hidden">Показать плиткой</span>
+        </a>
+        <a href="#" class="button-cardstyle-line">
+          <span class="visually-hidden">Показать строками</span>
+        </a>
+        <a href="#" class="button-cardstyle-list">
+          <span class="visually-hidden">Показать списком</span>
+        </a>
+
+        <ul class="cards"> <!-- выдача карточек -->
+          <li class="card">
+            <a href="#">
+              <img src="" alt="Гостиница в Седоне">
+            </a>
+            <a href="#">
+              <p class="card-title">Amara Resort & Spa</p>
+            </a>
+            <div class="card-bottom"> <!-- грид в две колонки -->
+              <p class="residental-type">Гостиница</p>
+              <p class="residental-price">От 4000 ₽</p>
+              <p class="card-more">Подробнее</p>
+              <p class="tofavorites">В избранное</p>
+              <p class="cards-stars">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+              </p>
+              <!--альтернатива: на основе полученного из бека значения лишние звезды скрываем скриптом
+              <p class="card-stars">
+                <img class="card-star-1" src="" alt="*">
+                <img class="card-star-2" src="" alt="*">
+                <img class="card-star-3" src="" alt="*">
+                <img class="card-star-4" src="" alt="*">
+                <img class="card-star-5" src="" alt="*">
+              </p>
+              -->
+              <p class="card-rating">Рейтинг:
+                <span class="card-ration-value">8,5</span>
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img src="" alt="Гостиница в Седоне">
+            </a>
+            <a href="#">
+              <p class="card-title">Villas at Poco Diablo</p>
+            </a>
+            <div class="card-bottom"> <!-- грид в две колонки -->
+              <p class="residental-type">Гостиница</p>
+              <p class="residental-price">От 5000 ₽</p>
+              <p class="card-more">Подробнее</p>
+              <p class="tofavorites favorited">В избранное</p>
+              <p class="cards-stars">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+              </p>
+              <p class="card-rating">Рейтинг:
+                <span class="card-ration-value">9,2</span>
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img src="" alt="Гостиница в Седоне">
+            </a>
+            <a href="#">
+              <p class="card-title">Desert Quail Inn</p>
+            </a>
+            <div class="card-bottom"> <!-- грид в две колонки -->
+              <p class="residental-type">Гостиница</p>
+              <p class="residental-price">От 2500 ₽</p>
+              <p class="card-more">Подробнее</p>
+              <p class="tofavorites">В избранное</p>
+              <p class="cards-stars">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+              </p>
+              <p class="card-rating">Рейтинг:
+                <span class="card-ration-value">6,9</span>
+              </p>
+            </div>
+          </li>          <li class="card">
+            <a href="#">
+              <img src="" alt="Гостиница в Седоне">
+            </a>
+            <a href="#">
+              <p class="card-title">GreenTree Inn</p>
+            </a>
+            <div class="card-bottom"> <!-- грид в две колонки -->
+              <p class="residental-type">Гостиница</p>
+              <p class="residental-price">От 1500 ₽</p>
+              <p class="card-more">Подробнее</p>
+              <p class="tofavorites">В избранное</p>
+              <p class="cards-stars">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+                <img class="card-star" src="" alt="*">
+              </p>
+              <p class="card-rating">Рейтинг:
+                <span class="card-ration-value">5,0</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul class="pagination">
+          <li class="paginator paginator-current">
+            1
+          </li>
+          <li class="paginator">
+            2
+          </li>
+          <li class="paginator">
+            3
+          </li>
+          <li class="paginator">
+            4
+          </li>
+          <li class="paginator paginator-intermediate">
+            ...
+          </li>
+          <li class="paginator">
+            10
+          </li>
+        </ul>
+      </section>
+
+      <section class="catalog-subscribe"> <!-- блок подписки -->
+        <h2 class="visually-hidden">Новости города Седона</h2>
+        <p class="catalog-slogan">Подпишитесь на рассылку</p>
+        <p class="catalog-comment">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subsctibe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label for="subsctibe-email">Email</label>
+          <input class="field" placeholder="Ваш e-mail" type="email" name="subsctibe-email" id="subsctibe-email" required>
+          <button class="subsctibe-button" type="submit">Подписаться</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- подвал -->
+    <footer class="main-footer">
+      <ul class="main-footer-socials">
+        <li class="main-footer-social">
+          <a class="main-footer-social-button" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="main-footer-social">
+          <a class="main-footer-social-button" href="#">
+            <span class="visually-hidden">Телеграм</span>
+          </a>
+        </li>
+        <li class="main-footer-social">
+          <a class="main-footer-social-button" href="#">
+            <span class="visually-hidden">YouTube</span>
+          </a>
+        </li>
+      </ul>
+      <a class="main-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="html-academy-link">
+        <img src="#" alt=".html academy">
+      </a>
+    </footer>
 
   </body>
 </html>
