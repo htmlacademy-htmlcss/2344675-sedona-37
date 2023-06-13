@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
 
     <!-- Header -->
     <header class="main-header">
       <nav class="main-nav">
-        <img src="#" alt="Логотип">
+        <img src="images/header-logo.png" width="140" height="70" alt="Логотип">
         <ul class="main-nav-list">
           <li class="main-nav-item current">
             <a>Главная</a>
@@ -24,12 +25,12 @@
         <ul class="main-nav-list">
           <li class="main-nav-item">
             <a href="#" class="main-nav-search"> <!-- предполагаем, что это ссылка на поиск гостиниц -->
-              <img src="#" alt="Поиск">
+              <img src="images/header-search.svg" width="18" height="18" alt="Поиск">
             </a>
           </li>
           <li>
             <a href="#" class="main-nav-favorites"> <!-- предполагаем, что это ссылка на список избранных гостиниц --> <!-- непонятен смысл счетчика на иконке -->
-              <img src="#" alt="Избранное">
+              <img src="images/header-favorites.svg" width="18" height="17" alt="Избранное">
             </a>
           </li>
           <li>
@@ -43,11 +44,13 @@
 
     <!-- Main -->
     <main class="index-main">
-      <h1 class="visually-hidden">Город Седона (Sedona) в Аризоне</h2>
+      <h1 class="visually-hidden">Город Седона (Sedona) в Аризоне</h1>
 
       <section class="main-hero">
         <h2 class="visually-hidden">О городе Седона</h2>
-        <div class="main-hero-splash"></div> <!-- декоративные изображения и надписи, будут заданы в стилях -->
+        <div class="main-hero-splash">
+          <img src="images/index/hero-title.svg" width="458" height="351" alt="Добро пожаловать в прекрасную Седону!">
+        </div>
         <p class="main-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="main-comment">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
@@ -59,7 +62,7 @@
             <p class="main-advantage-title">Настоящий городок</p>
             <p class="main-advantage-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </li>
-          <li><img src="#" alt="Улицы города Седоны"></li>
+          <li><img src="images/index/advantage-photo-1.jpg" width="800" height="385" alt="Улицы города Седоны"></li>
           <li class="main-advantage">
             <p class="main-advantage-title">Небольшая площадь</p>
             <p class="main-advantage-text">Все достопримечательности находятся очень близко</p>
@@ -72,7 +75,7 @@
             <p class="main-advantage-title">Мало туристов</p>
             <p class="main-advantage-text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-          <li><img src="#" alt="Мост Дьявола в Седоне"></li>
+          <li><img src="images/index/advantage-photo-2.jpg" width="800" height="385" alt="Мост Дьявола в Седоне"></li>
           <li class="main-advantage white-on-blue">
             <p class="main-advantage-title">Там есть мост дьявола</p>
             <p class="main-advantage-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -134,10 +137,14 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="html-academy-link">
-        <img src="#" alt=".html academy">
-      </a>
+      <div>
+        <a class="main-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </div>
+      <div>
+        <a class="html-academy-link">
+          <img src="images/htmll-academy.svg" alt=".html academy">
+        </a>
+      </div>
     </footer>
 
   </body>

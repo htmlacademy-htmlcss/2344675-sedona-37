@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+
+/* страница index */
+
+.main-hero-splash {
+  width: 1200px;
+  height: 485px;
+  background-color: #756157;
+  background-image: url("../images/index/hero-background-bottom.svg"), url("../images/index/hero-background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  /* ступенька снизу фона сделана отдельным вектором, чтобы избежать артефактов сжатия jpeg */
+}
+
+.main-hero-splash img {
+  position: absolute;
+  margin-left: 371px;
+  margin-top: 51px;
+}
+
+
+/* страница catalog */
+
+.index-subscribe {
+  width: 1200px;
+  height: 415px;
+  background-color: #756157;
+  background-image: url("../images/index/subscribe-background.jpg");
+}
+
+.catalog-adjust {
+  width: 1200px;
+  height: 415px;
+  background-color: #756157;
+  background-image: url("../images/catalog/catalog-filter-background.jpg");
+}
