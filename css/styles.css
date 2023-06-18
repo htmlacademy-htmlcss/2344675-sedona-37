@@ -1,0 +1,287 @@
+@font-face {
+  font-family: "PT Sans"/* , sans-serif */; /* Если раскомментировать, то текст рендерится не PT Sans - неясно, почему.
+                                               Валидатор выдает ошибку Too many values or values are not recognized.*/
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  background-color: #F2F2F2;
+  font-family: "PT Sans";
+  color:#000000;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  /* Такое допускается - сбросить margin и padding для всего документа?
+     Чтобы не сбраывать их у каждого класса всех параграфов.
+     Все равно при стилизации они будут заданы каждому классу/тегам вручную, элементов без классов или тегов остаться не должно. */
+  margin: 0;  /* Есть ли смысл сбрасывать здесь, если margin: 0 уже задан для doby? */
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+/* общие стили для всех страниц */
+
+.page-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-hero, .header, .main-advantages, .index-search, .index-subscribe, .main-footer  { /* TODO: добавить стили страницы catalog */
+  background-color: #ffffff;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.header-nav-go {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+/*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+  text-transform: uppercase;
+}
+
+/* страница index */
+
+.main-hero-splash {
+  width: 1200px;
+  height: 485px;
+  background-color: #3F5E72;
+  background-image: url("../images/index/hero-background-bottom.svg"), url("../images/index/hero-background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.main-hero-splash img {
+  position: absolute;
+  margin-left: 371px;
+  margin-top: 51px;
+}
+
+.main-slogan {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.main-comment {
+  color: #333333;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.main-advantage-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.main-advantage-text {
+  color: #333333;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.main-attractions-title {
+  /* Выше есть такое же правило - для .main-advantage-title.
+     Есть смысл объявить его для обоих классов сразу?
+     Это было бы компактнее. но уложнило бы поддержку.
+     Или же принято просто по возможности использовать одинаковые классы? */
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.main-attractions-text {
+  font-size: 18px;
+  line-height: 21px;
+  /* Тот же вопрос; совпадает с .main-advantage-text. */
+}
+
+.index-search-button {
+/*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+text-transform: uppercase;
+}
+
+.index-subscribe {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.main-footer-tel {
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* страница catalog */
+
+.catalog-adjust {
+  width: 1200px;
+  background-color: #3F5E72;
+  background-image: url("../images/catalog/catalog-filter-background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.index-subscribe {
+  width: 1200px;
+  height: 415px;
+  background-color: #756157;
+  background-image: url("../images/index/subscribe-background.jpg");
+}
+
+.catalog-adjust {
+  color: #ffffff;
+}
+
+.catalog-adjust h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  margin: 0;
+}
+
+.catalog-breadcrumb {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.catalog-selection-buttons {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.catalog-cards-caption-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.elect-control {
+  font-size: 20px;
+  line-height: 23px;
+  color: #333333;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.residental-type, .residental-price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.card-more .tofavorites {
+  font-size: 16px;
+  line-height: 20px;
+/*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+}
+
+.card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.paginator {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  /*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+}
+
+.paginator-current {
+  color: #000000;
+}
+
+.catalog-slogan {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.catalog-comment {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+.subsctibe-email {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.subsctibe-button {
+  font-size: 20px;
+  line-height: 36px;
+/*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+  text-transform: uppercase;
+}
