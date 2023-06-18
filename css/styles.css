@@ -1,6 +1,5 @@
 @font-face {
-  font-family: "PT Sans"/* , sans-serif */; /* Если раскомментировать, то текст рендерится не PT Sans - неясно, почему.
-                                               Валидатор выдает ошибку Too many values or values are not recognized.*/
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -8,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
@@ -18,7 +17,7 @@
 body {
   margin: 0;
   background-color: #F2F2F2;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   color:#000000;
   font-size: 18px;
   line-height: 21px;
@@ -26,24 +25,6 @@ body {
 
 img {
   display: block;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-p {
-  /* Такое допускается - сбросить margin и padding для всего документа?
-     Чтобы не сбраывать их у каждого класса всех параграфов.
-     Все равно при стилизации они будут заданы каждому классу/тегам вручную, элементов без классов или тегов остаться не должно. */
-  margin: 0;  /* Есть ли смысл сбрасывать здесь, если margin: 0 уже задан для doby? */
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
 }
 
 .visually-hidden {
@@ -59,25 +40,29 @@ a {
   overflow: hidden;
 }
 
-
 /* общие стили для всех страниц */
 
 .page-wrapper {
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.main-hero, .header, .main-advantages, .index-search, .index-subscribe, .main-footer  { /* TODO: добавить стили страницы catalog */
   background-color: #ffffff;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .header {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.header-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-nav-item a {
+  text-decoration: none;
 }
 
 .header-nav-go {
@@ -88,21 +73,37 @@ a {
   text-transform: uppercase;
 }
 
+.header-nav-go a {
+  text-decoration: none;
+}
+
+.main-footer-socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-footer-tel {
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+  text-decoration: none;
+}
+
 /* страница index */
 
 .main-hero-splash {
   width: 1200px;
   height: 485px;
+
   background-color: #3F5E72;
   background-image: url("../images/index/hero-background-bottom.svg"), url("../images/index/hero-background.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
-}
 
-.main-hero-splash img {
-  position: absolute;
-  margin-left: 371px;
-  margin-top: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-slogan {
@@ -116,6 +117,12 @@ a {
   color: #333333;
   font-size: 22px;
   line-height: 26px;
+}
+
+.main-advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .main-advantage-title {
@@ -147,31 +154,16 @@ a {
   /* Тот же вопрос; совпадает с .main-advantage-text. */
 }
 
+.main-attractions-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .index-search-button {
 /*   color: #ffffff; */ /* будет включено при стилизации кнопок */
-text-transform: uppercase;
-}
-
-.index-subscribe {
-  color: #ffffff;
   text-transform: uppercase;
-}
-
-.main-footer-tel {
-  font-size: 40px;
-  line-height: 48px;
-  color: #000000;
   text-decoration: none;
-}
-
-/* страница catalog */
-
-.catalog-adjust {
-  width: 1200px;
-  background-color: #3F5E72;
-  background-image: url("../images/catalog/catalog-filter-background.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
 }
 
 .index-subscribe {
@@ -179,9 +171,21 @@ text-transform: uppercase;
   height: 415px;
   background-color: #756157;
   background-image: url("../images/index/subscribe-background.jpg");
+
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
-.catalog-adjust {
+/* страница catalog */
+
+.catalog-caption {
+  width: 1200px;
+  background-color: #3F5E72;
+  background-image: url("../images/catalog/catalog-filter-background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size:cover; /* защита от случаев, когда после добавления контента из-за края фонового изображения виден фоновый цвет */
+
   color: #ffffff;
 }
 
@@ -190,6 +194,12 @@ text-transform: uppercase;
   font-size: 60px;
   line-height: 78px;
   margin: 0;
+}
+
+.catalog-breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .catalog-breadcrumb {
@@ -201,6 +211,13 @@ text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.catalog-filters-infrastructure, .catalog-filters-type {
+  /* тот же вопрос, что и в стр. 135. Группы стоят рядом и выглядят почти одинаково - принято стилиховать их одним правилом? */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .control {
@@ -220,10 +237,16 @@ text-transform: uppercase;
   line-height: 36px;
 }
 
-.elect-control {
-  font-size: 20px;
-  line-height: 23px;
+.select-control {
+  font-size: 14px;
+  line-height: 20px;
   color: #333333;
+}
+
+.cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card-title {
@@ -251,11 +274,14 @@ text-transform: uppercase;
   color: #333333;
 }
 
-.paginator {
+.paginator-list {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   /*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .paginator-current {
