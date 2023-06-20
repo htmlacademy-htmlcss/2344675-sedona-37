@@ -66,15 +66,23 @@ img {
 }
 
 .header-nav-go {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-/*   color: #ffffff; */ /* будет включено при стилизации кнопок */
-  text-transform: uppercase;
+  width: 160px;
+  height: 36px;
+  background-color: #756157;
+  border-radius: 4px;
+
+  display: flex;
 }
 
 .header-nav-go a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
   text-decoration: none;
+
+  margin: auto;
 }
 
 .main-footer-socials {
@@ -161,9 +169,23 @@ img {
 }
 
 .index-search-button {
-/*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+  width: 376px;
+  height: 52px;
+  background-color: #756157;
+  border-radius: 4px;
+
+  display: flex;
+}
+
+.index-search-button a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+
+  margin: auto;
 }
 
 .index-subscribe {
