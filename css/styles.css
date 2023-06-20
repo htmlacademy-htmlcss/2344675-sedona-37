@@ -236,7 +236,7 @@ img {
 }
 
 .catalog-filters-infrastructure, .catalog-filters-type {
-  /* тот же вопрос, что и в стр. 142. Группы стоят рядом и выглядят почти одинаково - принято стилиховать их одним правилом? */
+  /* тот же вопрос, что и в стр. 150. Группы стоят рядом и выглядят почти одинаково - принято стилиховать их одним правилом? */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -247,10 +247,34 @@ img {
   line-height: 23px;
 }
 
-.catalog-selection-buttons {
+.catalog-filter-button {
+  width: 191px;
+  height: 36px;
+  background-color: #82B3D3;
+  border: 0;
+  border-radius: 0;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.button-transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.sort-button {
+  width:48px;
+  height: 48px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.sort-button img {
+  margin: auto;
 }
 
 .catalog-cards-caption-title {
@@ -284,10 +308,36 @@ img {
   color: #333333;
 }
 
-.card-more .tofavorites {
+.card-button-more, .card-button-tofavorites {
+  width: 140px;
+  height: 36px;
+  background-color: #756157;
+  border-radius: 4px;
+
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-/*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: flex;
+}
+
+.card-button-more > span {
+  margin: auto;
+}
+
+.card-button-tofavorites > span {
+  margin: auto;
+}
+
+.card-button-tofavorites {
+  background-color: #82B3D3;
+}
+
+.favorited { /* дополнитлеьнй класс для .card-button-tofavorites */
+  background-color: #7DB54F;
 }
 
 .card-rating {
@@ -297,17 +347,45 @@ img {
 }
 
 .paginator-list {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  /*   color: #ffffff; */ /* будет включено при стилизации кнопок */
   margin: 0;
   padding: 0;
   list-style: none;
+
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  width: 400px;
+}
+
+.paginator-item {
+  width: 60px;
+  height: 60px;
+  background-color:#82B3D3;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+  display: flex;
+}
+
+.paginator-item {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 38px;
+  justify-content: center;
+  align-items: center;
 }
 
 .paginator-current {
   color: #000000;
+  background-color: #f2f2f2;
+}
+
+.paginator-intermediate {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .catalog-slogan {
