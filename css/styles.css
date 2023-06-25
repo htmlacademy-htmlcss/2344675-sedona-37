@@ -147,10 +147,6 @@ img {
 }
 
 .main-attractions-title {
-  /* Выше есть такое же правило - для .main-advantage-title.
-     Есть смысл объявить его для обоих классов сразу?
-     Это было бы компактнее. но уложнило бы поддержку.
-     Или же принято просто по возможности использовать одинаковые классы? */
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -159,7 +155,6 @@ img {
 .main-attractions-text {
   font-size: 18px;
   line-height: 21px;
-  /* Тот же вопрос; совпадает с .main-advantage-text. */
 }
 
 .main-attractions-list {
@@ -206,7 +201,7 @@ img {
   background-image: url("../images/catalog/catalog-filter-background.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size:cover; /* защита от случаев, когда после добавления контента из-за края фонового изображения виден фоновый цвет */
+  background-size: cover; /* защита от случаев, когда после добавления контента из-за края фонового изображения виден фоновый цвет */
 
   color: #ffffff;
 }
@@ -236,7 +231,6 @@ img {
 }
 
 .catalog-filters-infrastructure, .catalog-filters-type {
-  /* тот же вопрос, что и в стр. 150. Группы стоят рядом и выглядят почти одинаково - принято стилиховать их одним правилом? */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -408,6 +402,6 @@ img {
 .subsctibe-button {
   font-size: 20px;
   line-height: 36px;
-/*   color: #ffffff; */ /* будет включено при стилизации кнопок */
+  color: #ffffff;
   text-transform: uppercase;
 }
