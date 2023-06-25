@@ -10,35 +10,39 @@
     <div class="page-wrapper">
       <!-- Header -->
       <header class="header">
-        <nav class="header-nav">
-          <img src="images/header-logo.png" width="140" height="70" alt="Логотип">
-          <ul class="header-nav-list">
-            <li class="header-nav-item current">
-              <a>Главная</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#">О Седоне</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="catalog.html">Гостиницы</a>
-            </li>
-          </ul>
-          <ul class="header-nav-list">
-            <li class="header-nav-item">
-              <a href="#" class="header-nav-search">
-                <img src="images/header-search.svg" width="18" height="18" alt="Поиск">
-              </a>
-            </li>
-            <li>
-              <a href="#" class="header-nav-favorites">
-                <img src="images/header-favorites.svg" width="18" height="17" alt="Избранное">
-              </a>
-            </li>
-            <li class="header-nav-go">
-              <a href="#">Хочу сюда!</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="header-wrapper">
+          <nav class="header-nav">
+            <div class="header-logo">
+              <img src="images/header-logo.png" width="140" height="70" alt="Логотип">
+            </div>
+            <ul class="header-nav-list">
+              <li class="header-nav-item current">
+                <a>Главная</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#">О Седоне</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="catalog.html">Гостиницы</a>
+              </li>
+            </ul>
+          </nav>
+            <ul class="header-button-list">
+              <li class="header-button-item">
+                <a href="#" class="header-button-search">
+                  <img src="images/header-search.svg" width="18" height="18" alt="Поиск">
+                </a>
+              </li>
+              <li class="header-button-item">
+                <a href="#" class="header-button-favorites"> <!-- TODO: счетчик на иконке -->
+                  <img src="images/header-favorites.svg" width="18" height="17" alt="Избранное">
+                </a>
+              </li>
+              <li class="header-button-go">
+                <a href="#">Хочу сюда!</a>
+              </li>
+            </ul>
+          </div>
       </header>
 
       <!-- Main -->
