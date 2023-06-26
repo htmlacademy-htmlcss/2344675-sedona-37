@@ -133,13 +133,45 @@ img {
   margin: auto;
 }
 
-.main-footer-socials {
+.footer-wrapper {
+  padding: 45px 70px 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-socials {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.main-footer-tel {
+.footer-social {
+  width: 47px;
+  height: 40px;
+}
+
+.footer-vk {
+  background-image: url("../images/socials-vk.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-tg {
+  background-image: url("../images/socials-tg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-youtube {
+  background-image: url("../images/socials-youtube.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-tel {
   font-size: 40px;
   line-height: 48px;
   color: #000000;
