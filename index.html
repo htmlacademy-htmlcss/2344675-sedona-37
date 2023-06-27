@@ -55,58 +55,70 @@
             <img src="images/index/hero-title.svg" width="458" height="351" alt="Добро пожаловать в прекрасную Седону!">
             <!-- Надпись сделана отдельным векторным слоем для лучшего качества линий -->
           </div>
-          <p class="main-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="main-comment">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <div class="main-hero-text">
+            <p class="main-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+            <p class="main-comment">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
         </section>
 
         <section class="main-advantages">
           <h2 class="visually-hidden">Преимущества города Седона</h2>
           <ul class="main-advantages-list">
-            <li class="main-advantages-item white-on-blue"> <!-- Белый текст будет задан в стилях ячейки -->
+            <li class="main-advantages-item white-on-blue">
               <p class="main-advantage-title">Настоящий городок</p>
+              <p class="main-advantage-line"></p> <!-- TODO: переделать через :after, как сделано ниже в блоке attraction -->
               <p class="main-advantage-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </li>
             <li><img src="images/index/advantage-photo-1.jpg" width="800" height="385" alt="Улицы города Седоны."></li>
             <li class="main-advantages-item">
               <p class="main-advantage-title">Небольшая площадь</p>
+              <p class="main-advantage-line"></p>
               <p class="main-advantage-text">Все достопримечательности находятся очень близко</p>
             </li>
-            <li class="main-advantages-item">
+            <li class="main-advantages-item black-on-lightblue">
               <p class="main-advantage-title">Красивая дорога</p>
-              <li><img src="images/index/advantage-photo-2.jpg" width="800" height="385" alt="«Мост Дьявола» в Седоне."></li>
-              <p class="main-advantage-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="main-advantage-line"></p>
+              <p class="main-advantage-text">Ехать в Седону из Лас&#8209;Вегаса совсем не скучно!</p>
             </li>
             <li class="main-advantages-item">
               <p class="main-advantage-title">Мало туристов</p>
+              <p class="main-advantage-line"></p>
               <p class="main-advantage-text">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
+            <li><img src="images/index/advantage-photo-2.jpg" width="800" height="385" alt="«Мост Дьявола» в Седоне."></li>
             <li class="main-advantages-item white-on-blue">
               <p class="main-advantage-title">Там есть мост дьявола</p>
+              <p class="main-advantage-line"></p>
               <p class="main-advantage-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </li>
           </ul>
-          <p class="main-slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-          <p class="main-comment">Опытный персонал и качественное обслуживание!</p>
+          <div class="main-attraction-text">
+            <p class="main-slogan">Приезжайте в Седону отдохнуть в&nbsp;комфорте и уюте!</p>
+            <p class="main-comment">Опытный персонал и качественное обслуживание!</p>
+          </div>
           <ul class="main-attractions-list">
-            <li class="main-attractions-item">
-              <p class="main-attractions-title">Жильё</p>
-              <p class="main-attractions-text">Рекомендуем пожитьв настоящем мотеле, всё как в кино!</p>
+            <li class="main-attractions-item ">
+              <p class="main-attractions-title attraction-item-living">Жильё</p> <!-- второй класс нужен только для альтернативного решения -->
+              <p class="main-attractions-text">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>
+              <!-- Не понимаю, почему не получается сделать перенос строк точно как в макете.
+                   &nbsp; почему-то не работает. Ширина блока с текстом задана как в макете, но переносы строки в макете и рендере не совпадают.
+                   Тут можно использовать <br>? -->
+            </li>
+            <li class="main-attractions-item ">
+              <p class="main-attractions-title attraction-item-food">Еда</p>
+              <p class="main-attractions-text">Всегда заказывайте <br>топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="main-attractions-item">
-              <p class="main-attractions-title">Еда</p>
-              <p class="main-attractions-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-            </li>
-            <li class="main-attractions-item">
-              <p class="main-attractions-title">Сувениры</p>
-              <p class="main-attractions-text">Не только китайского, но и настоящего местного производства!</p>
+              <p class="main-attractions-title attraction-item-gifts">Сувениры</p>
+              <p class="main-attractions-text">Не только китайского, <br>но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
 
         <section class="index-search">
           <h2 class="visually-hidden">Гостиницы в городе Седона</h2>
-          <p class="main-slogan">Заинтересовались?</p>
-          <p class="main-comment">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="index-search-slogan">Заинтересовались?</p>
+          <p class="index-search-comment">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <div class="index-search-button" >
             <a href="#">Поиск гостиницы в Седоне</a>
           </div>
@@ -114,10 +126,10 @@
 
         <section class="index-subscribe">
           <h2 class="visually-hidden">Новости города Седона</h2>
-          <p class="main-slogan">Подпишитесь на рассылку</p>
-          <p class="main-comment">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="index-subscribe-slogan">Подпишитесь на рассылку</p>
+          <p class="index-subscribe-comment">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subsctibe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="subsctibe-email">Email</label>
+            <label for="subsctibe-email" class="visually-hidden">Email</label>
             <input class="field" placeholder="Ваш e-mail" type="email" name="subsctibe-email" id="subsctibe-email" required>
             <button class="subsctibe-button" type="submit">Подписаться</button>
           </form>

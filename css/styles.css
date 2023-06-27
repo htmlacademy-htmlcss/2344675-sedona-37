@@ -194,23 +194,58 @@ img {
   align-items: center;
 }
 
+.main-hero-text {
+  padding: 69px 290px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
 .main-slogan {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .main-comment {
   color: #333333;
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-advantages-list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-advantages-item { /* TODO: декоративная полоска м/у строками */
+  width: 400px;
+  height: 385px;
+  background-color: #83B3D31F; /* TODO: сверить формат записи цвета с критериями */
+  padding: 112px 80px; /* В макете горизонтлаьный padding 85px, но при таком в Firefox строка "Ехать в Седону..." разбивается на три строки */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  text-align: center;
 }
 
 .main-advantage-title {
@@ -218,29 +253,201 @@ img {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  width: 175px;
+  margin: 0;
 }
 
 .main-advantage-text {
   color: #333333;
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
 }
+
+.main-advantage-line {
+  width: 60px;
+  margin: 0;
+  border: 2px solid #0000004D;
+}
+
+.white-on-blue {
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+
+.white-on-blue .main-advantage-text {
+  color: #ffffff;
+}
+
+.white-on-blue .main-advantage-line {
+  border: 2px solid #ffffff3D;
+}
+
+.black-on-lightblue {
+  background-color: #83B3D333;
+}
+
+.main-attraction-text {
+  padding: 64px 290px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.main-attractions-list {
+  display: flex;
+}
+
+.main-attractions-item {
+  width: 400px;
+  height: 385px;
+  background-color: #83B3D31F;
+  padding: 0 85px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.main-attractions-item:nth-last-of-type(2) {
+  background-color: #FFFFFF;
+}
+
+.main-attractions-title::before {
+  content: " ";
+  display: block;
+  margin-bottom: 30px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-attractions-item:nth-of-type(1) > p:nth-of-type(1):before {
+  background-image: url(../images/index/attraction-living.svg);
+  width: 75px;
+  height: 72px;
+}
+
+.main-attractions-item:nth-of-type(2) > p:nth-of-type(1):before {
+  background-image: url(../images/index/attraction-food.svg);
+  width: 74px;
+  height: 70px;
+}
+
+.main-attractions-item:nth-of-type(3) > p:nth-of-type(1):before {
+  background-image: url(../images/index/attraction-gifts.svg);
+  width: 64px;
+  height: 76px;
+}
+
+/* альтернативное решение - какое лучше?
+.attraction-item-living:before {
+  background-image: url(../images/index/attraction-living.svg);
+  width: 75px;
+  height: 72px;
+}
+
+.attraction-item-food:before {
+  background-image: url(../images/index/attraction-food.svg);
+  width: 74px;
+  height: 70px;
+}
+
+.attraction-item-gifts:before {
+  background-image: url(../images/index/attraction-gifts.svg);
+  width: 64px;
+  height: 76px;
+}
+ */
 
 .main-attractions-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .main-attractions-text {
   font-size: 18px;
   line-height: 21px;
+  width: 230px;
+  margin: 0;
 }
 
 .main-attractions-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.index-search {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 304px;
+  align-items: center;
+  text-align: center;
+}
+
+.index-search-slogan {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.index-search-comment {
+  width: 592px;
+  color: #333333;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 54px;
+  padding: 0;
+}
+
+.index-subscribe {
+  width: 1200px;
+  height: 415px;
+  background-color: #3F5E72;
+  background-image: url("../images/index/subscribe-background.jpg");
+
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.index-subscribe-slogan {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin-top: 96px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.index-subscribe-comment {
+  width: 475px;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 54px;
+  padding: 0;
 }
 
 .index-search-button {
@@ -263,15 +470,6 @@ img {
   margin: auto;
 }
 
-.index-subscribe {
-  width: 1200px;
-  height: 415px;
-  background-color: #756157;
-  background-image: url("../images/index/subscribe-background.jpg");
-
-  color: #ffffff;
-  text-transform: uppercase;
-}
 
 /* страница catalog */
 
@@ -480,8 +678,14 @@ img {
 }
 
 .subsctibe-button {
+  width: 232px;
+  height: 52px;
+  background-color: #82B3D3;
+  border: 0;
+  border-radius: 0 4px 4px 0;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
 }
