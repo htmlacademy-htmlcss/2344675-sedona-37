@@ -232,10 +232,10 @@ img {
   flex-wrap: wrap;
 }
 
-.main-advantages-item { /* TODO: декоративная полоска м/у строками */
+.main-advantages-item {
   width: 400px;
   height: 385px;
-  background-color: #83B3D31F; /* TODO: сверить формат записи цвета с критериями */
+  background-color: rgba(131, 179, 211, 0.12);
   padding: 112px 80px; /* В макете горизонтлаьный padding 85px, но при таком в Firefox строка "Ехать в Седону..." разбивается на три строки */
   box-sizing: border-box;
 
@@ -267,7 +267,7 @@ img {
 .main-advantage-line {
   width: 60px;
   margin: 0;
-  border: 2px solid #0000004D;
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .white-on-blue {
@@ -280,11 +280,11 @@ img {
 }
 
 .white-on-blue .main-advantage-line {
-  border: 2px solid #ffffff3D;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .black-on-lightblue {
-  background-color: #83B3D333;
+  background-color: rgba(131, 179, 211, 0.2)
 }
 
 .main-attraction-text {
@@ -306,7 +306,7 @@ img {
 .main-attractions-item {
   width: 400px;
   height: 385px;
-  background-color: #83B3D31F;
+  background-color: rgba(131, 179, 211, 0.12);
   padding: 0 85px;
 
   display: flex;
