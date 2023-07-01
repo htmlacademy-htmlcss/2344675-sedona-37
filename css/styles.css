@@ -455,12 +455,15 @@ img {
 
 .catalog-caption {
   width: 1200px;
+  height: 412px;
+  box-sizing: border-box;
   background-color: #3F5E72;
   background-image: url("../images/catalog/catalog-filter-background.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover; /* защита от случаев, когда после добавления контента из-за края фонового изображения виден фоновый цвет */
 
+  padding: 35px 70px;
   color: #ffffff;
 }
 
@@ -475,6 +478,14 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  margin-bottom: 40px;
+}
+
+.catalog-breadcrumbs li {
+  display: inline-block;
+  padding: 6.5px;
+  vertical-align: middle;
 }
 
 .catalog-breadcrumb {
@@ -482,10 +493,31 @@ img {
   line-height: 21px;
 }
 
+.catalog-filters {
+  display: flex;
+}
+
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.catalog-filters-selector {
+  width: 70px;
+  margin-right: 70px;
+}
+
+.catalog-filter-price {
+  margin-left: 70px;
+  margin-right: 70px;
+  width: 290px;
+}
+
+.catalog-filter-buttons{
+  display: flex;
+  flex-direction: column;
+  padding-top: 56px;
 }
 
 .catalog-filters-infrastructure, .catalog-filters-type {
@@ -504,7 +536,7 @@ img {
   height: 36px;
   background-color: #82B3D3;
   border: 0;
-  border-radius: 0;
+  border-radius: 4px;
 
   font-weight: 700;
   font-size: 16px;
@@ -515,6 +547,7 @@ img {
 
 .button-transparent {
   background-color: rgba(0, 0, 0, 0);
+  margin-top: 32px;
 }
 
 .sort-button {

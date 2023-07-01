@@ -48,9 +48,9 @@
       <!-- Main -->
       <main>
         <section class="catalog-caption"> <!-- фильтры -->
-          <section class="catalog-adjust"> <!-- Белый текст будет задан в стилях -->
+          <section class="catalog-adjust">
             <h1>Гостиницы Седоны</h1>
-            <ul class="catalog-breadcrumbs"> <!-- Возможно, лучше сделать не списком, а строчными элементами. Тогда без стилей они сразу будут идти в строку. -->
+            <ul class="catalog-breadcrumbs">
               <li class="catalog-breadcrumb-home">
                 <a href="index.html">
                   <img src="images/catalog/breadcrumbs-home.svg" alt="Главная">
@@ -63,7 +63,7 @@
             </ul>
             <div class="catalog-filters">
               <h2 class="visually-hidden">Подбор гостиницы в Седоне</h2>
-              <fieldset class=catalog-selector>
+              <fieldset class=catalog-filters-selector> <!-- TODO: стилизация контролов -->
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                   <ul class="catalog-filters-infrastructure">
                     <li>
@@ -86,7 +86,7 @@
                     </li>
                   </ul>
               </fieldset>
-              <fieldset class=catalog-selector>
+              <fieldset class=catalog-filters-selector>
                 <legend class="catalog-filter-title">Тип Жилья:</legend>
                 <ul class="catalog-filters-type">
                   <li>
@@ -109,8 +109,9 @@
                 </li>
                 </ul>
               </fieldset>
-              <div class=catalog-selector>
+              <div class=catalog-filter-price>
                 <p class="catalog-filter-title">Стоимость, ₽:</p>
+                <!-- TODO: поля ввода диапазона -->
                 <!-- TODO: слайдер -->
               </div>
               <div class="catalog-filter-buttons">
