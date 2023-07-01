@@ -553,31 +553,63 @@ img {
 .sort-button {
   width:48px;
   height: 48px;
-  border: 2px solid #000000;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
   background-color: #ffffff;
+  margin-right: 8px;
+  padding: 0;
+}
+
+.sort-button:last-child {
+  margin-right: 0;
+}
+
+.sort-button-active {
+  border-color: #000000;
 }
 
 .sort-button img {
   margin: auto;
 }
 
+.catalog-cards-caption {
+  margin: 50px 70px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .catalog-cards-caption-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  text-transform: uppercase;
+  Margin: 0;
 }
 
 .select-control {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
+  width: 292px;
+  height: 50px;
+  margin-right: 70px;
 }
 
 .cards {
-  margin: 0;
+  margin: 0 70px;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 340px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .card-title {
@@ -629,6 +661,14 @@ img {
   font-size: 16px;
   line-height: 20px;
   color: #333333;
+}
+
+.paginator-container {
+  margin: 40px 70px 60px;
+  padding: 0;
+  padding-top: 40px;
+  width: 1060px;
+  border-top: 1px solid #E6E6E6;
 }
 
 .paginator-list {

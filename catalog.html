@@ -122,25 +122,28 @@
           </section>
         </section>
 
-          <section class="catalog-cards-caption"> <!-- блок карточек -->
-            <h2 class="visually-hidden">Гостиницы в Седоне</h2>
-            <p class="catalog-cards-caption-title">Найдено гостиниц:
-              <span>38</span> <!-- число будет подставляться из бека -->
-            </p>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheapest">Сначала дешевые</option>
-              <option value="cheapest">Сначала дорогие</option> <!-- предположительно, в макете других значений не указано -->
-              <option value="cheapest">По рейтингу</option>     <!-- предположительно, в макете других значений не указано -->
-            </select>
-            <button class="sort-button">
-              <img src=images/catalog/button-cardstyle-tiles.svg width="16" height="14" alt="Показать плиткой.">
-            </button>
-            <button class="sort-button">
-              <img src=images/catalog/button-cardstyle-line.svg width="16" height="14" alt="Показать строками.">
-            </button>
-            <button class="sort-button">
-              <img src=images/catalog/button-cardstyle-list.svg width="16" height="14" alt="Показать списком.">
-            </button>
+          <section class="catalog-cards"> <!-- блок карточек -->
+            <div class="catalog-cards-caption">
+              <h2 class="visually-hidden">Гостиницы в Седоне</h2>
+              <p class="catalog-cards-caption-title">Найдено гостиниц: <span>38</span>
+              </p>
+              <div> <!-- Можно оставить div без классов? Он тут нужен только для группировки кнопок в единый флекс-элемент. -->
+                <select class="select-control" aria-label="Сортировка">
+                  <option value="cheapest" selected>Сначала дешевые</option>
+                  <option value="cheapest">Сначала дорогие</option> <!-- предположительно, в макете других значений не указано -->
+                  <option value="cheapest">По рейтингу</option>     <!-- предположительно, в макете других значений не указано -->
+                </select>
+                <button class="sort-button sort-button-active">
+                  <img src=images/catalog/button-cardstyle-tiles.svg width="16" height="14" alt="Показать плиткой.">
+                </button>
+                <button class="sort-button">
+                  <img src=images/catalog/button-cardstyle-line.svg width="16" height="14" alt="Показать строками.">
+                </button>
+                <button class="sort-button">
+                  <img src=images/catalog/button-cardstyle-list.svg width="16" height="14" alt="Показать списком.">
+                </button>
+              </div>
+            </div>
 
             <ul class="cards"> <!-- выдача карточек -->
               <li class="card">
@@ -150,7 +153,7 @@
                 <a href="#">
                   <p class="card-title">Amara Resort & Spa</p>
                 </a>
-                <div class="card-bottom"> <!-- грид в две колонки -->
+                <div class="card-bottom"> <!-- TODO: грид в две колонки -->
                   <p class="residental-type">Гостиница</p>
                   <p class="residental-price">От 4000 ₽</p>
                   <p class="card-button-more"><span>Подробнее</span></p>
@@ -233,26 +236,29 @@
                 </div>
               </li>
             </ul>
-            <ul class="paginator-list">
-              <li class="paginator-item paginator-current">
-                <span>1</span>
-              </li>
-              <li class="paginator-item">
-                <span>2</span>
-              </li>
-              <li class="paginator-item">
-                <span>3</span>
-              </li>
-              <li class="paginator-item">
-                <span>4</span>
-              </li>
-              <li class="paginator-item paginator-intermediate">
-                <span>...</span>
-              </li>
-              <li class="paginator-item">
-                <span>10</span>
-              </li>
-            </ul>
+
+            <div class="paginator-container">
+              <ul class="paginator-list">
+                <li class="paginator-item paginator-current">
+                  <span>1</span>
+                </li>
+                <li class="paginator-item">
+                  <span>2</span>
+                </li>
+                <li class="paginator-item">
+                  <span>3</span>
+                </li>
+                <li class="paginator-item">
+                  <span>4</span>
+                </li>
+                <li class="paginator-item paginator-intermediate">
+                  <span>...</span>
+                </li>
+                <li class="paginator-item">
+                  <span>10</span>
+                </li>
+              </ul>
+            </div>
           </section>
 
           <section class="catalog-subscribe"> <!-- блок подписки -->
