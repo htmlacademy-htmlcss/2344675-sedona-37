@@ -713,7 +713,19 @@ img {
   background-color: #ffffff;
 }
 
+.catalog-subscribe {
+  height: 415px;
+  text-align: center;
+  display: flex;
+  flex-direction: column
+;}
+
+
+
+
 .catalog-slogan {
+  margin-top: 96px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -721,6 +733,7 @@ img {
 }
 
 .catalog-comment {
+  margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -733,6 +746,7 @@ img {
 .subsctibe-button {
   width: 232px;
   height: 52px;
+  margin-bottom: 54px;
   background-color: #82B3D3;
   border: 0;
   border-radius: 0 4px 4px 0;
