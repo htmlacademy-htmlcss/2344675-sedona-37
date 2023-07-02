@@ -584,6 +584,15 @@ img {
   margin: auto;
 }
 
+.select-control {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  width: 292px;
+  height: 50px;
+  margin-right: 70px;
+}
+
 .catalog-cards-caption {
   margin: 50px 70px 60px;
   display: flex;
@@ -596,15 +605,6 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   Margin: 0;
-}
-
-.select-control {
-  font-size: 14px;
-  line-height: 20px;
-  color: #333333;
-  width: 292px;
-  height: 50px;
-  margin-right: 70px;
 }
 
 .cards {
@@ -631,7 +631,8 @@ img {
   color: #000000;
 }
 
-.residental-type, .residental-price {
+.card-type,
+.card-price {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
@@ -665,7 +666,7 @@ img {
   background-color: #82B3D3;
 }
 
-.favorited { /* дополнитлеьнй класс для .card-button-tofavorites */
+.favorited {
   background-color: #7DB54F;
 }
 
