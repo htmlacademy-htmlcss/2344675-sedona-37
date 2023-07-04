@@ -618,13 +618,27 @@ img {
 
 .card {
   width: 340px;
+  min-height: 438px;
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
+
+  display: grid;
+  grid-template-columns: 140px 140px;
+  column-gap: 20px;
+  row-gap: 16px;
+}
+
+.card-photo,
+.card-title {
+  text-decoration: none;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .card-title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -633,14 +647,25 @@ img {
 
 .card-type,
 .card-price {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
 }
 
-.card-button-more, .card-button-tofavorites {
+.card-price {
+  justify-self: right;
+}
+
+.cards-stars {
+  align-self:center;
+}
+
+.card-button-more,
+.card-button-tofavorites {
   width: 140px;
   height: 36px;
+  margin: 0;
   background-color: #756157;
   border-radius: 4px;
 
@@ -670,10 +695,27 @@ img {
   background-color: #7DB54F;
 }
 
-.card-rating {
+.cards-stars {
+  margin: 0;
+}
+
+.card-button-rating {
   font-size: 16px;
   line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
   color: #333333;
+
+  width: 140px;
+  height: 36px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+
+  display: flex;
+}
+
+.card-button-rating > span {
+  margin: auto;
 }
 
 .paginator-container {
