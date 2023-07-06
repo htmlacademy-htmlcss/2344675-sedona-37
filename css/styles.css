@@ -687,8 +687,32 @@ img {
 }
 
 .cards-stars {
-  align-self:center;
+  align-self: center;
+  background-image: url("../images/catalog/card-star.svg");
+  background-repeat: space;
 }
+
+.stars-1 {
+  width: 18px;
+}
+
+.stars-2 {
+  width: 42px;
+}
+
+.stars-3 {
+  width: 66px;
+}
+
+.stars-4 {
+  width: 90px;
+}
+
+.stars-5 {
+  width: 114px;
+}
+
+
 
 .card-button-more,
 .card-button-tofavorites,
