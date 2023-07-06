@@ -170,7 +170,9 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 142px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -219,6 +221,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.img-cover {
+  object-fit: cover;
+  min-height: 100%;
 }
 
 .main-hero-text {
@@ -428,6 +435,9 @@ img {
   height: 415px;
   background-color: #3F5E72;
   background-image: url("../images/index/subscribe-background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   color: #ffffff;
 
@@ -488,7 +498,7 @@ img {
   background-image: url("../images/catalog/catalog-filter-background.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover; /* защита от случаев, когда после добавления контента из-за края фонового изображения виден фоновый цвет */
+  background-size: cover; /* альтернатива object-fit: cover */
 
   padding: 35px 70px;
   color: #ffffff;
@@ -650,6 +660,10 @@ img {
   text-decoration: none;
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.card-photo {
+  background-color: #F2F2F2;
 }
 
 .card-title {
