@@ -691,10 +691,13 @@ img {
 }
 
 .card-button-more,
-.card-button-tofavorites {
+.card-button-tofavorites,
+.card-button-rating {
   width: 140px;
-  height: 36px;
+  min-height: 36px;
   margin: 0;
+  box-sizing: border-box;
+  padding: 8px;
   background-color: #756157;
   border-radius: 4px;
 
@@ -706,14 +709,8 @@ img {
   text-align: center;
 
   display: flex;
-}
-
-.card-button-more > span {
-  margin: auto;
-}
-
-.card-button-tofavorites > span {
-  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-button-tofavorites {
@@ -724,27 +721,14 @@ img {
   background-color: #7DB54F;
 }
 
+.card-button-rating {
+  background-color: #F2F2F2;
+  font-weight: 400;
+  color: #333333;
+}
+
 .cards-stars {
   margin: 0;
-}
-
-.card-button-rating {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  margin: 0;
-  color: #333333;
-
-  width: 140px;
-  height: 36px;
-  background-color: #F2F2F2;
-  border-radius: 4px;
-
-  display: flex;
-}
-
-.card-button-rating > span {
-  margin: auto;
 }
 
 .paginator-container {
