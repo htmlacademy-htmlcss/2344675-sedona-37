@@ -710,7 +710,8 @@ img {
 .cards-stars {
   align-self: center;
   background-image: url("../images/catalog/card-star.svg");
-  background-repeat: space;
+  height: 18px;
+  background-repeat: repeat-x;
 }
 
 .stars-1 {
