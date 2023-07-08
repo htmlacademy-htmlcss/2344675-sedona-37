@@ -14,6 +14,11 @@
   font-display: swap;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   background-color: #F2F2F2;
@@ -21,6 +26,10 @@ body {
   color:#000000;
   font-size: 18px;
   line-height: 21px;
+}
+
+main {
+  flex-grow: 1;
 }
 
 img {
@@ -47,6 +56,9 @@ img {
   margin: 0 auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .header {
@@ -57,7 +69,7 @@ img {
 }
 
 .header-wrapper {
-  height: 64px;
+  min-height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,20 +81,32 @@ img {
 }
 
 .header-logo {
-  align-self: self-start;
-  margin-right: 44px;
+  position: absolute;
+  top: 0;
 }
 
 .header-nav-list {
   margin: 0;
+  margin-left: 184px; /* чтобы перекрыть пространство под лого, которое выпало из потока из-за position: absolute;
+                         184 = ширина лого 140 + margin до меню 44.
+                         Альтернативное решение: добавить в разметку прозрачную подложку размером с логотип, которая будет находиться в потоке (position: static).*/
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.header-nav-item {
+  margin-right: 32px;
+  /* margin-right для последнего элемента не убран, чтобы при добавлении новых элементов всегда было поле до соседнего справа блока. */
 }
 
 .header-nav-item a {
   text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header-nav-item a:visited {
@@ -98,8 +122,6 @@ img {
 }
 
 .header-button-item {
-  width: 44px;
-  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,13 +129,18 @@ img {
 
 .header-button-search {
   display: block;
+  padding: 23px 13px 23px 13px;
+}
+
+.header-button-favorites {
+  display: block;
+  padding: 24px 13px 23px 13px;
 }
 
 
-
 .header-button-go {
-  width: 160px;
-  height: 36px;
+  min-width: 160px;
+  min-height: 36px;
   background-color: #756157;
   border-radius: 4px;
 
@@ -128,9 +155,9 @@ img {
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
-
-  margin: auto;
+  padding: 8px 34px;
 }
 
 .footer-wrapper {
@@ -572,6 +599,15 @@ img {
   margin: auto;
 }
 
+.select-control {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  width: 292px;
+  height: 50px;
+  margin-right: 70px;
+}
+
 .catalog-cards-caption {
   margin: 50px 70px 60px;
   display: flex;
@@ -586,15 +622,6 @@ img {
   Margin: 0;
 }
 
-.select-control {
-  font-size: 14px;
-  line-height: 20px;
-  color: #333333;
-  width: 292px;
-  height: 50px;
-  margin-right: 70px;
-}
-
 .cards {
   margin: 0 70px;
   padding: 0;
@@ -606,28 +633,54 @@ img {
 
 .card {
   width: 340px;
+  min-height: 438px;
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
+
+  display: grid;
+  grid-template-columns: 140px 140px;
+  column-gap: 20px;
+  row-gap: 16px;
+}
+
+.card-photo,
+.card-title {
+  text-decoration: none;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .card-title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
 }
 
-.residental-type, .residental-price {
+.card-type,
+.card-price {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
 }
 
-.card-button-more, .card-button-tofavorites {
+.card-price {
+  justify-self: right;
+}
+
+.cards-stars {
+  align-self:center;
+}
+
+.card-button-more,
+.card-button-tofavorites {
   width: 140px;
   height: 36px;
+  margin: 0;
   background-color: #756157;
   border-radius: 4px;
 
@@ -653,14 +706,31 @@ img {
   background-color: #82B3D3;
 }
 
-.favorited { /* дополнитлеьнй класс для .card-button-tofavorites */
+.favorited {
   background-color: #7DB54F;
 }
 
-.card-rating {
+.cards-stars {
+  margin: 0;
+}
+
+.card-button-rating {
   font-size: 16px;
   line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
   color: #333333;
+
+  width: 140px;
+  height: 36px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+
+  display: flex;
+}
+
+.card-button-rating > span {
+  margin: auto;
 }
 
 .paginator-container {
@@ -717,11 +787,8 @@ img {
   height: 415px;
   text-align: center;
   display: flex;
-  flex-direction: column
-;}
-
-
-
+  flex-direction: column;
+}
 
 .catalog-slogan {
   margin-top: 96px;

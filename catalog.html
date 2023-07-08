@@ -16,14 +16,14 @@
               <img src="images/header-logo.png" width="140" height="70" alt="Логотип">
             </div>
             <ul class="header-nav-list">
-              <li class="header-nav-item current">
+              <li class="header-nav-item">
                 <a href="index.html">Главная</a>
               </li>
               <li class="header-nav-item">
                 <a href="#">О Седоне</a>
               </li>
-              <li class="header-nav-item">
-                <a href="#">Гостиницы</a>
+              <li class="header-nav-item current">
+                <a>Гостиницы</a>
               </li>
             </ul>
           </nav>
@@ -91,19 +91,19 @@
                 <ul class="catalog-filters-type">
                   <li>
                   <label class="control">
-                    <input class="control-input" type="radio" name="residental-type">
+                    <input class="control-input" type="radio" name="card-type">
                     Гостиница
                   </label>
                 </li>
                 <li>
                   <label class="control">
-                    <input class="control-input" type="radio" name="residental-type">
+                    <input class="control-input" type="radio" name="card-type">
                     Мотель
                   </label>
                 </li>
                 <li>
                   <label class="control">
-                    <input class="control-input" type="radio" name="residental-type">
+                    <input class="control-input" type="radio" name="card-type">
                     Апартаменты
                   </label>
                 </li>
@@ -147,93 +147,64 @@
 
             <ul class="cards"> <!-- выдача карточек -->
               <li class="card">
-                <a href="#">
+                <a class="card-photo" href="#">
                   <img src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Гостиница Amara Resort & Spa в Седоне.">
                 </a>
-                <a href="#">
-                  <p class="card-title">Amara Resort & Spa</p>
-                </a>
-                <div class="card-bottom"> <!-- TODO: грид в две колонки -->
-                  <p class="residental-type">Гостиница</p>
-                  <p class="residental-price">От 4000 ₽</p>
-                  <p class="card-button-more"><span>Подробнее</span></p>
-                  <p class="card-button-tofavorites"><span>В избранное</span></p>
-                  <p class="cards-stars">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*"> <!-- изображение контекстное, т.к. это кол-во звезд отеля, важная информация для заказа -->
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                  </p>
-                  <p class="card-rating">Рейтинг:
-                    <span class="card-ration-value">8,5</span>
-                  </p>
-                </div>
+                <a class="card-title"href="#">Amara Resort & Spa</a>
+                <p class="card-type">Гостиница</p>
+                <p class="card-price">От 4000 ₽</p>
+                <p class="card-button-more"><span>Подробнее</span></p>
+                <p class="card-button-tofavorites"><span>В избранное</span></p>
+                <p class="cards-stars"> <!-- переделать на декоративные -->
+                  <img class="card-star" src="images/catalog/card-star.svg" alt="4 звезды">
+                </p>
+                <p class="card-button-rating"><span>Рейтинг: 8,5</span>
+                </p>
               </li>
               <li class="card">
-                <a href="#">
+                <a class="card-photo" href="#">
                   <img src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Гостиница Villas at Poco Diablo в Седоне.">
                 </a>
-                <a href="#">
-                  <p class="card-title">Villas at Poco Diablo</p>
-                </a>
-                <div class="card-bottom"> <!-- грид в две колонки -->
-                  <p class="residental-type">Гостиница</p>
-                  <p class="residental-price">От 5000 ₽</p>
-                  <p class="card-button-more"><span>Подробнее</span></p>
-                  <p class="card-button-tofavorites favorited"><span>В избранное</span></p>
-                  <p class="cards-stars">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                  </p>
-                  <p class="card-rating">Рейтинг:
-                    <span class="card-ration-value">9,2</span>
-                  </p>
-                </div>
+                <a class="card-title"href="#">Amara Resort & Spa</a>
+                <p class="card-type">Гостиница</p>
+                <p class="card-price">От 5000 ₽</p>
+                <p class="card-button-more"><span>Подробнее</span></p>
+                <p class="card-button-tofavorites favorited"><span>В избранном</span></p>
+                <p class="cards-stars">
+                  <img class="card-star" src="images/catalog/card-star.svg" alt="4 звезды">
+                </p>
+                <p class="card-button-rating"><span>Рейтинг: 9,2</span>
+                </p>
               </li>
               <li class="card">
-                <a href="#">
+                <a class="card-photo" href="#">
                   <img src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Гостиница Desert Quail Inn в Седоне.">
                 </a>
-                <a href="#">
-                  <p class="card-title">Desert Quail Inn</p>
-                </a>
-                <div class="card-bottom"> <!-- грид в две колонки -->
-                  <p class="residental-type">Гостиница</p>
-                  <p class="residental-price">От 2500 ₽</p>
-                  <p class="card-button-more"><span>Подробнее</span></p>
-                  <p class="card-button-tofavorites"><span>В избранное</span></p>
-                  <p class="cards-stars">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                  </p>
-                  <p class="card-rating">Рейтинг:
-                    <span class="card-ration-value">6,9</span>
-                  </p>
-                </div>
+                <a class="card-title"href="#">Desert Quail Inn</a>
+                <p class="card-type">Гостиница</p>
+                <p class="card-price">От 2500 ₽</p>
+                <p class="card-button-more"><span>Подробнее</span></p>
+                <p class="card-button-tofavorites"><span>В избранное</span></p>
+                <p class="cards-stars">
+                  <img class="card-star" src="images/catalog/card-star.svg" alt="3 звезды">
+                </p>
+                <p class="card-button-rating"><span>Рейтинг: 6,9</span>
+                </p>
               </li>
               <li class="card">
-                <a href="#">
+                <a class="card-photo" href="#">
                   <img src="images/catalog/hotel-4.jpg" width="300" height="212" alt="Гостиница GreenTree Inn в Седоне.">
                 </a>
-                <a href="#">
-                  <p class="card-title">GreenTree Inn</p>
-                </a>
-                <div class="card-bottom"> <!-- грид в две колонки -->
-                  <p class="residental-type">Гостиница</p>
-                  <p class="residental-price">От 1500 ₽</p>
-                  <p class="card-button-more"><span>Подробнее</span></p>
-                  <p class="card-button-tofavorites"><span>В избранное</span></p>
-                  <p class="cards-stars">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                    <img class="card-star" src="images/catalog/card-star.svg" alt="*">
-                  </p>
-                  <p class="card-rating">Рейтинг:
-                    <span class="card-ration-value">5,0</span>
-                  </p>
-                </div>
+                <a class="card-title"href="#">GreenTree Inn</a>
+                <p class="card-type">Гостиница</p>
+                <p class="card-price">От 1500 ₽</p>
+                <p class="card-button-more"><span>Подробнее</span></p>
+                <p class="card-button-tofavorites"><span>В избранное</span></p>
+                <p class="cards-stars">
+                  <img class="card-star" src="images/catalog/card-star.svg" alt="2 звезды">
+                </p>
+                <p class="card-button-rating"><span>Рейтинг: 5,0</span>
+                </p>
               </li>
             </ul>
 
