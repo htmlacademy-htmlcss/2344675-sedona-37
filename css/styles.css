@@ -135,8 +135,25 @@ img {
 .header-button-favorites {
   display: block;
   padding: 24px 13px 23px 13px;
+  position: relative;
 }
 
+.header-button-favorites-counter {
+  background-color: #7DB54F;
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  border-radius: 50%;
+
+  width: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+}
 
 .header-button-go {
   min-width: 160px;
