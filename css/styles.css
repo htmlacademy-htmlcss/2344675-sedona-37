@@ -197,24 +197,13 @@ img {
 .footer-social {
   width: 47px;
   height: 40px;
+  display: flex;
+  align-items: center;
 }
 
-.footer-vk {
-  background-image: url("../images/socials-vk.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.footer-tg {
-  background-image: url("../images/socials-tg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.footer-youtube {
-  background-image: url("../images/socials-youtube.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+.footer-social-link {
+  padding: 12px;
+  margin: 0 auto;
 }
 
 .footer-tel {
