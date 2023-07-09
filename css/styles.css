@@ -546,9 +546,21 @@ img {
   vertical-align: middle;
 }
 
+.catalog-breadcrumb-home {
+  padding-right: 10px;
+}
+
 .catalog-breadcrumb {
   font-size: 16px;
   line-height: 21px;
+}
+
+.catalog-breadcrumb:before {
+  content: "";
+  background-image: url("../images/catalog/breadcrumbs-arrow.svg");
+  height: 11px;
+  width: 19px;
+  display: inline-block;
 }
 
 .catalog-filters {
