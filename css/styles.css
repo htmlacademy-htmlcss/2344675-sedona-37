@@ -294,7 +294,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
 
   text-align: center;
 }
@@ -309,17 +308,25 @@ img {
   /* Считаем, что тексты неизменные (задаются дизайнером, а не контент-менеджером) и можно не обеспечивать положение линии-разделителя всегда по центру (например, дополнительным уровнем флексов и прижать тексты к линии с помощью align-self). */
 }
 
+.main-advantage-title:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 60px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-advantage-text {
   color: #333333;
   font-size: 18px;
   line-height: 21px;
   margin: 0;
-}
-
-.main-advantage-line {
-  width: 60px;
-  margin: 0;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
 }
 
 .white-on-blue {
@@ -331,8 +338,8 @@ img {
   color: #ffffff;
 }
 
-.white-on-blue .main-advantage-line {
-  border: 2px solid rgba(255, 255, 255, 0.3);
+.white-on-blue .main-advantage-title:after {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .black-on-lightblue {
