@@ -238,11 +238,58 @@ img {
   margin: auto;
 }
 
+.footer-social-link:focus {
+  outline-style: none;
+}
+
+.footer-social-button:hover path {
+  fill: #68A2CA;
+}
+
+.footer-social-button:focus path {
+  fill: #68A2CA;
+  outline-style: none;
+}
+
+.footer-social-button:active path {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 .footer-tel {
   font-size: 40px;
   line-height: 48px;
   color: #000000;
   text-decoration: none;
+}
+
+.footer-tel:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.footer-tel:focus {
+  color: rgba(117, 97, 87, 1);
+  outline-style: none;
+}
+
+.footer-tel:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.html-academy-link {
+  outline-style: none;
+}
+
+.html-academy-svg:hover path {
+  fill: rgba(117, 97, 87, 1);
+}
+
+.html-academy-svg:focus path {
+  fill: rgba(117, 97, 87, 1);
+  outline-style: none;
+}
+
+.html-academy-svg:active path {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* страница index */
