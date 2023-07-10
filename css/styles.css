@@ -950,12 +950,41 @@ img {
   align-items: center;
 }
 
+.paginator-item:hover {
+  background-color: #68A2CA;
+}
+
+.paginator-item a:focus {
+  background-color: #68A2CA;
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.paginator-item a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .paginator-current {
   color: #000000;
   background-color: #f2f2f2;
 }
 
+.paginator-current:hover,
+.paginator-current a:focus,
+.paginator-current a:active /* Предотвращает применение состояний от более общего класса paginator-item. */
+{
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
 .paginator-intermediate {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.paginator-intermediate:hover,
+.paginator-intermediate a:focus,
+.paginator-intermediate a:active { /* Предотвращает применение состояний от более общего класса paginator-item. */
   color: #000000;
   background-color: #ffffff;
 }
@@ -968,6 +997,16 @@ img {
 .paginator-intermediate,
 .paginator-last {
   min-width: max-content;
+}
+
+.paginator-intermediate a {
+  padding-left: 10.36px; /* Величина недостающего поля при дефолтном содержимом, чтобы получить ширину блока по макету (ручная подгонка). */
+  padding-right: 10.36px;
+}
+
+.paginator-last a {
+  padding-left: 6.7px; /* Величина недостающего поля при дефолтном содержимом, чтобы получить ширину блока по макету (ручная подгонка). */
+  padding-right: 6.7px;
 }
 
 .catalog-subscribe {
