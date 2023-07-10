@@ -701,6 +701,20 @@ img {
   margin-right: 0;
 }
 
+.sort-button:hover {
+  border-color: #000000;
+}
+
+.sort-button:focus {
+  border-color: #68A2CA;
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.sort-button:active {
+  border-color: #000000;
+}
+
 .sort-button-active {
   border-color: #000000;
 }
