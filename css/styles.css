@@ -818,6 +818,7 @@ img {
 
 .card-button-more,
 .card-button-tofavorites,
+.card-button-favorited,
 .card-button-rating {
   width: 140px;
   min-height: 36px;
@@ -838,18 +839,64 @@ img {
   align-items: center;
 }
 
+.card-button-more:hover {
+  background-color: #615048;
+}
+
+.card-button-more a:focus {
+  background-color: #615048;
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.card-button-more:active {
+  color: rgba(255, 255, 255, 0.3)
+}
+
 .card-button-tofavorites {
   background-color: #82B3D3;
 }
 
-.favorited {
+.card-button-tofavorites:hover {
+  background-color: #68A2CA;
+}
+
+.card-button-tofavorites a:focus {
+  background-color: #68A2CA;
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.card-button-tofavorites:active {
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.card-button-favorited {
   background-color: #7DB54F;
+}
+.card-button-favorited:hover {
+  background-color: #6C9E42;
+}
+
+.card-button-favorited a:focus {
+  background-color: #6C9E42;
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.card-button-favorited:active {
+  color: rgba(255, 255, 255, 0.3)
 }
 
 .card-button-rating {
   background-color: #F2F2F2;
   font-weight: 400;
   color: #333333;
+}
+
+.card-button-rating a:focus {
+  outline-style: none;
+  border-radius: 4px;
 }
 
 .card-button-link {
