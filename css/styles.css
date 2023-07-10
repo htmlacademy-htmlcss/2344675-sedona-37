@@ -578,6 +578,11 @@ img {
   padding-right: 10px;
 }
 
+.catalog-breadcrumb-home a:focus { /* В стайлгайде не было, добавил на свое усмотрение. */
+  outline: 3px solid #83B3D3;
+  outline-offset: 5px;
+}
+
 .catalog-breadcrumb {
   font-size: 16px;
   line-height: 21px;
@@ -590,6 +595,25 @@ img {
   width: 19px;
   display: inline-block;
 }
+
+.catalog-breadcrumb:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.catalog-breadcrumb a:focus  {
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.catalog-breadcrumb a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .catalog-filters {
   display: flex;
