@@ -861,6 +861,20 @@ img {
   width: 292px;
   height: 50px;
   margin-right: 70px;
+  background-color: #ffffff;
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 2px;
+}
+
+.select-control:hover {
+  border-color: rgba(104, 162, 202, 1);
+  border-radius: 2px;
+}
+
+.select-control:focus {
+  outline-style: none;
+  border-color: rgba(104, 162, 202, 1);
+  border-radius: 2px;
 }
 
 .catalog-cards-caption {
