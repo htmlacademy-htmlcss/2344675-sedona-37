@@ -585,6 +585,7 @@ img {
 
 .subsctibe-form {
   display: flex;
+  justify-content: center;
 }
 
 .field {
