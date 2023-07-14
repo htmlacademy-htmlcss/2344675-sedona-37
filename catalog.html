@@ -13,17 +13,17 @@
         <div class="header-wrapper">
           <nav class="header-nav">
             <div class="header-logo">
-              <img src="images/header-logo.png" width="140" height="70" alt="Логотип">
+              <img src="images/header-logo.png" width="140" height="70" alt="Логотип"> <!-- Логотип на всех страницах логотип не является ссылкой на главную т.к. рядом с ним уже есть пункт меню "Главная". -->
             </div>
             <ul class="header-nav-list">
-              <li class="header-nav-item">
+              <li class="header-nav-item current">
                 <a href="index.html">Главная</a>
               </li>
               <li class="header-nav-item">
                 <a href="#">О Седоне</a>
               </li>
-              <li class="header-nav-item current">
-                <a>Гостиницы</a>
+              <li class="header-nav-item">
+                <a href="#">Гостиницы</a> <!-- Ссылка не убрана (даже ссылка "на эту же страницу"), чтобы сохранить предсказуемость при навигации с клавиатуры. -->
               </li>
             </ul>
           </nav>
@@ -34,8 +34,9 @@
                 </a>
               </li>
               <li class="header-button-item">
-                <a href="#" class="header-button-favorites"> <!-- TODO: счетчик на иконке -->
+                <a href="#" class="header-button-favorites">
                   <img src="images/header-favorites.svg" width="18" height="17" alt="Избранное">
+                  <span class="header-button-favorites-counter">12</span>
                 </a>
               </li>
               <li class="header-button-go">
@@ -241,7 +242,7 @@
             <p class="catalog-slogan">Подпишитесь на рассылку</p>
             <p class="catalog-comment">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subsctibe-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label for="subsctibe-email">Email</label>
+              <label class="visually-hidden" for="subsctibe-email">Email</label>
               <input class="field" placeholder="Ваш e-mail" type="email" name="subsctibe-email" id="subsctibe-email" required>
               <button class="subsctibe-button" type="submit">Подписаться</button>
             </form>
