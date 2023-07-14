@@ -524,6 +524,28 @@ img {
   padding: 0;
 }
 
+.index-search-button {
+  min-width: 376px;
+  max-width: 685px; /* Ширина ближайшего похожего блока - формы подписки */
+  min-height: 52px;
+  background-color: #756157;
+  border-radius: 4px;
+
+  display: flex;
+}
+
+.index-search-button a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  margin: auto;
+  padding: 8px 50px;
+}
+
 .index-subscribe {
   width: 1200px;
   height: 415px;
@@ -561,28 +583,65 @@ img {
   padding: 0;
 }
 
-.index-search-button {
-  min-width: 376px;
-  max-width: 685px; /* Ширина ближайшего похожего блока - формы подписки */
-  min-height: 52px;
-  background-color: #756157;
-  border-radius: 4px;
-
+.subsctibe-form {
   display: flex;
 }
 
-.index-search-button a {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
+.field {
+  font-size: 18px;
+  width: 452px;
+  height: 52px;
+  box-sizing: border-box;
 
-  margin: auto;
-  padding: 8px 50px;
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
 }
 
+.field:hover {
+  background-color:rgba(230, 230, 230, 1);
+}
+
+.field:focus {
+  background-color:rgba(230, 230, 230, 1);
+  outline-style: none;
+  border: 3px solid rgba(131, 179, 211, 1);
+}
+
+.subsctibe-button {
+  width: 232px;
+  height: 52px;
+  margin-bottom: 54px;
+  background-color: #82B3D3;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.subsctibe-button:hover {
+  background-color: rgba(104, 162, 202, 1);
+}
+
+.subsctibe-button:focus {
+  outline-style: none;
+  background-color: rgba(104, 162, 202, 1);
+}
+
+.subsctibe-button:active {
+  background-color: rgba(104, 162, 202, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
 
 /* страница catalog */
 
@@ -1120,18 +1179,4 @@ img {
 .subsctibe-email {
   font-size: 18px;
   line-height: 24px;
-}
-
-.subsctibe-button {
-  width: 232px;
-  height: 52px;
-  margin-bottom: 54px;
-  background-color: #82B3D3;
-  border: 0;
-  border-radius: 0 4px 4px 0;
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
 }
