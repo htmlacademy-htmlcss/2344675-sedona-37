@@ -113,11 +113,25 @@
                 </li>
                 </ul>
               </fieldset>
-              <div class=catalog-filter-price>
-                <p class="catalog-filter-title">Стоимость, ₽:</p>
-                <!-- TODO: поля ввода диапазона -->
-                <!-- TODO: слайдер -->
-              </div>
+              <fieldset class="catalog-filter-price">
+                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                <div class="price-limits">
+                  <div class="price-limits-inputs">
+                    <div class="price-limits-label">
+                      <label class="price-limits-field">
+                        <input class="price-input" type="number" name="price-min" min="0" placeholder="от" value="0">
+                        <span class="price-input-hint">от</span>
+                      </label>
+                    </div>
+                    <div class="price-limits-label">
+                      <label class="price-limits-field">
+                        <input class="price-input" type="number" name="price-max" max="9000" placeholder="до" value="9000">
+                        <span class="price-input-hint">до</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
               <div class="catalog-filter-buttons">
                 <button class="catalog-filter-button" type="submit">Применить</button>
                 <button class="catalog-button-transparent" type="reset">Сбросить</button>
