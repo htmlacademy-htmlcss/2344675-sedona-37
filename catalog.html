@@ -66,48 +66,49 @@
             </ul>
             <div class="catalog-filters">
               <h2 class="visually-hidden">Подбор гостиницы в Седоне</h2>
-              <fieldset class=catalog-filters-selector> <!-- TODO: стилизация контролов -->
+
+              <fieldset class=catalog-filters-infrastructure>
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
-                  <ul class="catalog-filters-infrastructure">
-                    <li>
+                  <ul class="catalog-filters-list">
+                    <li class="catalog-filters-checkbox">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="pool">
-                        Бассейн
+                        <input class="control-input" type="checkbox" name="pool" checked>
+                        <span class="control-label">Бассейн</span>
                       </label>
                     </li>
                     <li>
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="parking">
-                        Парковка
+                        <input class="control-input" type="checkbox" name="parking" checked>
+                        <span class="control-label">Парковка</span>
                       </label>
                     </li>
                     <li>
                       <label class="control">
                         <input class="control-input" type="checkbox" name="wi-fi">
-                        Wi-Fi
+                        <span class="control-label">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
               </fieldset>
-              <fieldset class=catalog-filters-selector>
+              <fieldset class="catalog-filters-type">
                 <legend class="catalog-filter-title">Тип Жилья:</legend>
-                <ul class="catalog-filters-type">
-                  <li>
+                <ul class="catalog-filters-list">
+                  <li class="catalog-filters-radio">
                   <label class="control">
-                    <input class="control-input" type="radio" name="card-type">
-                    Гостиница
+                    <input class="control-input" type="radio" name="card-type" checked>
+                    <span class="control-label">Гостиница</span>
                   </label>
                 </li>
-                <li>
+                <li class="catalog-filters-radio">
                   <label class="control">
                     <input class="control-input" type="radio" name="card-type">
-                    Мотель
+                    <span class="control-label">Мотель</span>
                   </label>
                 </li>
-                <li>
+                <li class="catalog-filters-radio">
                   <label class="control">
                     <input class="control-input" type="radio" name="card-type">
-                    Апартаменты
+                    <span class="control-label">Апартаменты</span>
                   </label>
                 </li>
                 </ul>
