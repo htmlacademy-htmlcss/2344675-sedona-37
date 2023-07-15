@@ -660,6 +660,11 @@ img {
   color: #ffffff;
 }
 
+.catalog-adjust {
+  display: flex;
+  flex-direction: column;
+}
+
 .catalog-adjust h1 {
   font-weight: 700;
   font-size: 60px;
@@ -721,17 +726,17 @@ img {
   color: inherit;
 }
 
-
-.catalog-filters {
-  display: flex;
-}
-
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   margin: 0;
   margin-bottom: 32px;
+}
+
+.catalog-form {
+  width: 1060px;
+  display: flex;
 }
 
 .catalog-filters-infrastructure,
@@ -815,17 +820,11 @@ img {
 }
 
 .catalog-filter-price {
-  margin-left: 70px;
-  margin-right: 70px;
-  width: 290px;
-}
-
-.catalog-filter-price {
-  min-width: 288px;
-  margin-left: auto;
-  margin-right: 70px;
+  width: 280px;
   padding: 0;
   border: none;
+  margin-left: auto;
+  margin-right: 70px;
 }
 
 .range_wrapper_inputs {
