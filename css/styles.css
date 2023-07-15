@@ -956,6 +956,38 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.price-slider {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.30);
+}
+
+.price-slider_bar {
+  position: absolute;
+  left: 0;
+  width: 226px;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.price-slider-set {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+.price-set-min {
+  top: -8px;
+  left: 0;
+}
+
+.price-set-max {
+  top: -8px;
+  left: 207px;
+}
 
 .sort-button {
   width:48px;
