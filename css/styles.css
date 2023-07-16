@@ -213,6 +213,7 @@ img {
   padding: 45px 70px 35px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-socials {
@@ -253,6 +254,10 @@ img {
 
 .footer-social-button:active path {
   fill: rgba(104, 162, 202, 0.3);
+}
+
+.footer-phone {
+  margin-top: -5px;
 }
 
 .footer-tel {
@@ -319,7 +324,8 @@ img {
 }
 
 .main-hero-text {
-  padding: 69px 290px;
+  padding: 69px 250px; /* Не из макета: горизонтальные поля визуально рифмуются с зигзагом сверху и с пунктами в шапке. */
+  margin-bottom: 21px; /* По макету: отступ до следующего блока. */
 
   display: flex;
   flex-direction: column;
@@ -360,7 +366,7 @@ img {
   width: 400px;
   min-height: 385px;
   background-color: rgba(131, 179, 211, 0.12);
-  padding: 112px 80px; /* В макете горизонтлаьный padding 85px, но при таком в Firefox строка "Ехать в Седону..." разбивается на три строки. */
+  padding: 102px 80px; /* В макете горизонтлаьный padding 85px, но при таком в Firefox строка "Ехать в Седону..." разбивается на три строки. */
   box-sizing: border-box;
 
   display: flex;
@@ -424,7 +430,7 @@ img {
 
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 
@@ -441,6 +447,7 @@ img {
   background-color: rgba(131, 179, 211, 0.12);
   padding: 30px 85px; /* вертикальный отсутп 30px - равен отступу между блоками текста (воздух вокруг композиции не может быть меньше, чем промежутки между ее элементами). */
   /* Тексты, скорее всего, неизменные (задаются дизайнером, а не контент-менеджером), поэтому можно считать, что количество строк текста останется неизменным. Иначе нужно предусмотреть выстраивание заголовков и описаний в одну линию (например, дополнительным уровнем вложенности флексов). */
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
@@ -485,6 +492,7 @@ img {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin-top: 0;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
@@ -511,6 +519,7 @@ img {
 }
 
 .index-search-slogan {
+  width: 700px; /* Для визуальной рифмовки с шапкой и зигзагом блока hero. */
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -520,7 +529,7 @@ img {
 }
 
 .index-search-comment {
-  width: 592px;
+  width: 700px; /* Для визуальной рифмовки с шапкой и зигзагом блока hero. */
   color: #333333;
   font-size: 22px;
   line-height: 26px;
@@ -578,6 +587,7 @@ img {
 }
 
 .index-subscribe-slogan {
+  width: 700px; /* Для визуальной рифмовки с шапкой и зигзагом блока hero. */
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -588,7 +598,7 @@ img {
 }
 
 .index-subscribe-comment {
-  width: 475px;
+  width: 700px; /* Для визуальной рифмовки с шапкой и зигзагом блока hero. */
   color: #ffffff;
   font-size: 22px;
   line-height: 26px;
@@ -691,12 +701,13 @@ img {
   padding: 0;
   list-style: none;
 
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .catalog-breadcrumbs li {
   display: inline-block;
   padding: 6.5px;
+  padding-left: 0;
   vertical-align: middle;
 }
 
@@ -718,7 +729,7 @@ img {
   content: "";
   background-image: url("../images/catalog/breadcrumbs-arrow.svg");
   height: 11px;
-  width: 19px;
+  width: 15px;
   display: inline-block;
 }
 
@@ -776,7 +787,7 @@ img {
 .control {
   font-size: 18px;
   line-height: 23px;
-  margin-bottom: 17.5px;
+  margin-bottom: 17px;
   display: flex;
   align-items: center;
 }
@@ -1074,12 +1085,14 @@ img {
 }
 
 .select-control {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   color: #333333;
   width: 292px;
   height: 50px;
   margin-right: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #ffffff;
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 2px;
@@ -1097,17 +1110,24 @@ img {
 }
 
 .catalog-cards-caption {
-  margin: 50px 70px 60px;
+  margin: 50px 70px 38px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .catalog-cards-caption-title {
+  max-width: 400px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   Margin: 0;
+}
+
+.catalog-cards-layout {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .cards {
@@ -1410,6 +1430,7 @@ img {
 }
 
 .catalog-comment {
+  margin: 0;
   margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
