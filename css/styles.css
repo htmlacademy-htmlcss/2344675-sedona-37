@@ -305,7 +305,12 @@ img {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.main-hero-lettering {
+  align-self: flex-start;
+  margin: 0;
+  padding-top: 51px;
 }
 
 .img-cover {
