@@ -10,7 +10,7 @@
 
     <div class="page-wrapper">
       <!-- Header -->
-      <header class="header">
+      <header class="header" data-test="header">
         <div class="header-wrapper">
           <nav class="header-nav">
             <div class="header-logo">
@@ -48,8 +48,8 @@
       </header>
 
       <!-- Main -->
-      <main>
-        <section class="catalog-caption"> <!-- фильтры -->
+      <main data-test="main">
+        <section class="catalog-caption" data-test="filter"> <!-- фильтры -->
           <section class="catalog-adjust">
             <h1>Гостиницы Седоны</h1>
             <ul class="catalog-breadcrumbs">
@@ -152,7 +152,7 @@
           </section>
         </section>
 
-          <section class="catalog-cards"> <!-- блок карточек -->
+          <section class="catalog-cards" data-test="catalog"> <!-- блок карточек -->
             <div class="catalog-cards-caption">
               <h2 class="visually-hidden">Гостиницы в Седоне</h2>
               <p class="catalog-cards-caption-title">Найдено гостиниц: <span>38</span>
@@ -262,7 +262,7 @@
             </div>
           </section>
 
-          <section class="catalog-subscribe"> <!-- блок подписки -->
+          <section class="catalog-subscribe" data-test="subscribe"> <!-- блок подписки -->
             <h2 class="visually-hidden">Новости города Седона</h2>
             <p class="catalog-slogan">Подпишитесь на рассылку</p>
             <p class="catalog-comment">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -276,7 +276,7 @@
     </main>
 
       <!-- подвал -->
-      <footer class="footer">
+      <footer class="footer" data-test="footer" >
         <div class="footer-wrapper">
           <ul class="footer-socials">
             <li class="footer-social">
