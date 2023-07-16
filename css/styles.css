@@ -1575,16 +1575,21 @@ img {
   color: #ffffff;
   line-height: 20px;
   text-align: left;
+  font-size: 16px;
   font-weight: 400;
   background-color: rgba(51, 51, 51, 1);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  display: block;
   position: absolute;
   top: 52px;
   left: -50px;
   z-index: 2;
   display: none;
+}
+
+.tooltip-button:hover + .tooltip-text,
+.tooltip-button:focus + .tooltip-text {
+  display: block;
 }
 
 .tooltip-text:after {
@@ -1599,10 +1604,6 @@ img {
   z-index: 1;
 }
 
-.tooltip-button:hover + .tooltip-text,
-.tooltip-button:focus + .tooltip-text {
-  display: block;
-}
 
 
 
