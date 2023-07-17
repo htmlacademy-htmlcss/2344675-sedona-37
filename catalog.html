@@ -49,9 +49,10 @@
 
       <!-- Main -->
       <main data-test="main">
+        <h1 class="visually-hidden"></h1>>Гостиницы Седоны</h1>
         <section class="catalog-caption" data-test="filter"> <!-- фильтры -->
+          <h2 class="visually-hidden">Подобрать гостиницу в Седоне.</h2>
           <section class="catalog-adjust">
-            <h1>Гостиницы Седоны</h1>
             <ul class="catalog-breadcrumbs">
               <li class="catalog-breadcrumb-home">
                 <a href="index.html">
@@ -155,9 +156,9 @@
           <section class="catalog-cards" data-test="catalog"> <!-- блок карточек -->
             <div class="catalog-cards-caption">
               <h2 class="visually-hidden">Гостиницы в Седоне</h2>
-              <p class="catalog-cards-caption-title">Найдено гостиниц: <span>38</span>
+              <p class="catalog-cards-caption-title"><span>Найдено гостиниц: 38</span>
               </p>
-              <div>
+              <div class="catalog-cards-layout">
                 <select class="select-control" aria-label="Сортировка">
                   <option value="by-cheap" selected="selected">Сначала дешевые</option>
                   <option value="by-expensive">Сначала дорогие</option>
@@ -180,7 +181,7 @@
                 <a class="card-photo" href="#">
                   <img class="img-cover" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Гостиница Amara Resort & Spa в Седоне.">
                 </a>
-                <a class="card-title"href="#">Amara Resort & Spa</a>
+                <a class="card-title" href="#">Amara Resort & Spa</a>
                 <p class="card-type">Гостиница</p>
                 <p class="card-price">От 4000 ₽</p>
                 <p class="card-button-more"><a class="card-button-link" href="#">Подробнее</a></p>
@@ -195,7 +196,7 @@
                 <a class="card-photo" href="#">
                   <img class="img-cover" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Гостиница Villas at Poco Diablo в Седоне.">
                 </a>
-                <a class="card-title"href="#">Villas at Poco Diablo</a>
+                <a class="card-title" href="#">Villas at Poco Diablo</a>
                 <p class="card-type">Гостиница</p>
                 <p class="card-price">От 5000 ₽</p>
                 <p class="card-button-more"><a class="card-button-link" href="#">Подробнее</a></p>
@@ -210,7 +211,7 @@
                 <a class="card-photo" href="#">
                   <img class="img-cover" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Гостиница Desert Quail Inn в Седоне.">
                 </a>
-                <a class="card-title"href="#">Desert Quail Inn</a>
+                <a class="card-title" href="#">Desert Quail Inn</a>
                 <p class="card-type">Гостиница</p>
                 <p class="card-price">От 2500 ₽</p>
                 <p class="card-button-more"><a class="card-button-link" href="#">Подробнее</a></p>
@@ -225,7 +226,7 @@
                 <a class="card-photo" href="#">
                   <img class="img-cover" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="Гостиница GreenTree Inn в Седоне.">
                 </a>
-                <a class="card-title"href="#">GreenTree Inn</a>
+                <a class="card-title" href="#">GreenTree Inn</a>
                 <p class="card-type">Гостиница</p>
                 <p class="card-price">От 1500 ₽</p>
                 <p class="card-button-more"><a class="card-button-link" href="#">Подробнее</a></p>
@@ -265,14 +266,13 @@
           <section class="catalog-subscribe" data-test="subscribe"> <!-- блок подписки -->
             <h2 class="visually-hidden">Новости города Седона</h2>
             <p class="catalog-slogan">Подпишитесь на рассылку</p>
-            <p class="catalog-comment">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <p class="catalog-comment">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
             <form class="subsctibe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="subsctibe-email">Email</label>
               <input class="field" placeholder="Ваш e-mail" type="email" name="subsctibe-email" id="subsctibe-email" required>
               <button class="subsctibe-button" type="submit">Подписаться</button>
             </form>
           </section>
-      </section>
     </main>
 
       <!-- подвал -->
@@ -304,7 +304,7 @@
               </a>
             </li>
           </ul>
-          <div>
+          <div class="footer-phone">
             <a class="footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </div>
           <div>
