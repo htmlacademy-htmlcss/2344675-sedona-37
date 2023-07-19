@@ -642,7 +642,7 @@ img {
 
 .subsctibe-button {
   width: 232px;
-  height: 52px;
+  min-height: 52px;
   margin-bottom: 54px;
   background-color: #82B3D3;
   border: 0;
@@ -956,7 +956,7 @@ img {
 
 .catalog-filter-button {
   width: 191px;
-  height: 36px;
+  min-height: 36px;
   background-color: #82B3D3;
   border: 0;
   border-radius: 4px;
@@ -984,7 +984,7 @@ img {
 
 .catalog-button-transparent {
   width: 191px;
-  height: 36px;
+  min-height: 36px;
   border: 0;
   border-radius: 4px;
   font-weight: 700;
